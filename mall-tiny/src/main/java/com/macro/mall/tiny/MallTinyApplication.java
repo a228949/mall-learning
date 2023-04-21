@@ -8,7 +8,5 @@ public class MallTinyApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(MallTinyApplication.class, args);
-        System.out.println();
     }
-
 }
