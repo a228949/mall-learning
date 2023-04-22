@@ -2,18 +2,20 @@ package com.macro.mall.tiny.mbg.model;
 
 import java.io.Serializable;
 
+/**
+ * pms_brand实体类
+ */
 public class PmsBrand implements Serializable {
+    //品牌id
     private Long id;
 
+    //品牌名称
     private String name;
 
-    /**
-     * 首字母
-     *
-     * @mbggenerated
-     */
+    //品牌首字母
     private String firstLetter;
 
+    //品牌分类
     private Integer sort;
 
     /**
@@ -23,20 +25,13 @@ public class PmsBrand implements Serializable {
      */
     private Integer factoryStatus;
 
+    //显示状态
     private Integer showStatus;
 
-    /**
-     * 产品数量
-     *
-     * @mbggenerated
-     */
+    //产品数量
     private Integer productCount;
 
-    /**
-     * 产品评论数量
-     *
-     * @mbggenerated
-     */
+    //产品评论数量
     private Integer productCommentCount;
 
     /**

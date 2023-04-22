@@ -26,12 +26,14 @@ public class PmsBrandController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(PmsBrandController.class);
 
-    @RequestMapping(value = "listAll", method = RequestMethod.GET)
+    //查询所有
+    @RequestMapping(value = "/listAll", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult<List<PmsBrand>> getBrandList() {
         return CommonResult.success(demoService.listAllBrand());
     }
 
+    //新建
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     @ResponseBody
     public CommonResult createBrand(@RequestBody PmsBrand pmsBrand) {
