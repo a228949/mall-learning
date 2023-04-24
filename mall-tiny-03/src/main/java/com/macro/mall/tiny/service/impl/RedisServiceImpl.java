@@ -26,6 +26,7 @@ public class RedisServiceImpl implements RedisService {
         return stringRedisTemplate.opsForValue().get(key);
     }
 
+    //设置过期时间为expire秒
     @Override
     public boolean expire(String key, long expire) {
         return stringRedisTemplate.expire(key, expire, TimeUnit.SECONDS);
@@ -36,6 +37,7 @@ public class RedisServiceImpl implements RedisService {
         stringRedisTemplate.delete(key);
     }
 
+    //实现键的自增
     @Override
     public Long increment(String key, long delta) {
         return stringRedisTemplate.opsForValue().increment(key,delta);
