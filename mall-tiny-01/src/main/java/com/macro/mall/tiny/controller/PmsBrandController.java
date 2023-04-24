@@ -49,6 +49,7 @@ public class PmsBrandController {
         return commonResult;
     }
 
+    //更新单个
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
     @ResponseBody
     public CommonResult updateBrand(@PathVariable("id") Long id, @RequestBody PmsBrand pmsBrandDto, BindingResult result) {
@@ -64,6 +65,7 @@ public class PmsBrandController {
         return commonResult;
     }
 
+    //删除单个
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult deleteBrand(@PathVariable("id") Long id) {
@@ -77,6 +79,7 @@ public class PmsBrandController {
         }
     }
 
+    //分页查询
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult<CommonPage<PmsBrand>> listBrand(@RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum,
@@ -85,6 +88,7 @@ public class PmsBrandController {
         return CommonResult.success(CommonPage.restPage(brandList));
     }
 
+    //查询单个
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult<PmsBrand> brand(@PathVariable("id") Long id) {
